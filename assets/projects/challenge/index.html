@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ejercicios Matemáticos Interactivos</h1>
+
+    <div class="container">
+
+<!-- Calculadora de descuentos -->
+        <div class="card">
+            <h2> 1. Calculadora de descuentos</h2>
+            <input type="number" id="precio" placeholder="PVPs original">
+            <input type="number" id="porcentaje" placeholder="Descuento %">
+            <button id="btnAplicar">Aplicar</button> 
+
+            <p>Ahorro: <span id="ahorro">0.00</span></p>                       <!--creo los id para llamarlos desde JS-->
+            <p>PVP final: <span id="final">0.00</span></p>  
+        </div> 
+
+        <!-- 2. Conversor de divisas -->
+        <div class="card">
+            <h2>2. Conversor de divisas</h2>
+            <input type="number" id="cantidadEUR" placeholder="Cantidad a convertir € " />
+            <!--vamos a indicar que moneda vamos a cambiar-->
+            <select id="monedaDestino">
+                <option value="USD">Dolares (USD) </option>
+                <option value="GBP">Libras sterlinas (GBP)</option>
+                <option value="JPY">Yenes </option>
+            </select>
+
+            <button id="btnConvertir">Convertir</button>
+            <p>Resultado: <span id="resultadoConversion">0.00</span></p>
+           
+        </div>
+
+        <!-- 3. Calculadora de IMC -->
+        <div class="card">
+            <h2>3. Calculadora de IMC</h2>
+            <input type="number" id="peso" placeholder="Peso (kg)" step="0.1" />
+            <input type="number" id="altura" placeholder="Altura en m" step="0.01" />
+            <button id="btnIMC">Calcular IMC</button>
+            <p>IMC: <span id="resultadoIMC">0.00</span></p>
+            <p>Clasificación: <span id="clasificacionIMC">-</span></p>
+        </div>
+
+        <!-- 4. Lista de la compra dinámica -->
+        <div class="card">
+            <h2>4. Lista de la compra</h2>
+            <input type="text" id="itemTexto" placeholder="Añadir producto" />
+            <button id="btnAgregar">Añadir</button>
+            <ul id="listaCompra"></ul>
+        </div>
+
+        <!-- 5. Temporizador sencillo -->
+        <div class="card">
+            <h2>5. Temporizador</h2>
+            <input type="number" id="segundos" placeholder="Segundos" />
+            <button id="btnIniciar">Iniciar</button>
+            <p>Cuenta atrás: <span id="contador">0</span></p>
+        </div>
+            
+</div>
+
+</body>
+
+</html>

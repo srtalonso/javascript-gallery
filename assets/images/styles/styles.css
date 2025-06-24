@@ -1,0 +1,125 @@
+:root{
+    --fondo: #ffffd0;
+    --tarjeta: #fcd37f;
+    --amarillo-intenso:#f9a72e ;
+    --amarillo-medio:#fbbd56 ;
+    --verde: #80be6f;
+    --verde-claro:#a4de90 ;
+    --verde-palido:#c8ffb2 ;
+    --texto: 1#0b0b0b;
+
+    --spacio: 1rem;
+    --radio: 8px;
+    --sombra: #a1a1a1;
+    --trasicion: 0.2s ease; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%;
+}
+
+body{
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: sans-serif;
+    line-height: 1.4rem;
+}
+
+header{
+    text-align: center;
+    padding: var(--spacio);
+    background: var(--amarillo-medio);
+    color: var(--tarjeta);
+}
+
+header h1{
+    margin-bottom: var(--spacio);
+}
+
+#filters{
+    display: inline-flex;
+    gap: 0.5em;
+}
+
+#filters{
+    background: var(--tarjeta);
+    border: 2px solid var(--amarillo-medio);
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background var(--trasicion); /*Transicion de fondo*/
+    border-radius:15px;
+}
+
+/*estado del hover*/
+
+#filters button:hover,
+#filters.active{
+    background: var(--amarillo-medio);
+    color: #ffffd0;
+}
+
+.gallery{
+    display: grid;
+    gap: var(--spacio);
+    padding: var(--spacio);
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card{
+    background: var(--tarjeta);
+    border-radius: var(--radio);
+    overflow: var(--sombra);
+    box-shadow: var(--sombra);
+    transition: transform var(--trasicion);
+}
+
+.card:hover{
+    transform: translateY(-5px); /*Sed eleva la tarjeta al pasar*/
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /*RECORTAR MANTENIENDO PROPOCIONES*/
+    transition: transform var(--trasicion);
+}
+
+.card:hover img{
+    transform: scale(1.05);         /*Zoom suave en hover*/
+}
+
+.card h3{
+    padding: 0.75em;
+    font-size: 1.1em;
+}
+
+.card .links{
+    display: flex;
+    justify-content: space-around;
+    padding: 0.75em;
+}
+
+.card .links a{
+    text-decoration: none;
+    background: var(--verde);
+    color: #ffffd0;
+    padding: 0.4em 0.8em;
+    font-size: 0.9em;
+    transition: opacity var(--trasicion);
+}
+
+footer{
+    text-align: center;
+    padding: var(--spacio);
+    font-size: 0.9em;
+    background: var(--verde-claro);
+    margin-top: var(--spacio);
+}

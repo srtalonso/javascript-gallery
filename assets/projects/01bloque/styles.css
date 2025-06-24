@@ -1,0 +1,63 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      background-image: url(fondo.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #004766;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .ejercicio {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .ejercicio h2 {
+      font-size: 1.2rem;
+      color: #005b96;
+    }
+    .ejercicio label,
+    .ejercicio p {
+      font-size: 0.95rem;
+    }
+    .ejercicio input,
+    .ejercicio button,
+    .ejercicio textarea {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .ejercicio button {
+      background: #007acc;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1rem;
+      border: none;
+    }
+    .ejercicio button:hover {
+      background: #005fa3;
+    }
+    .resultado {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #004766;
+    }
